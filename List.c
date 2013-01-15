@@ -55,8 +55,8 @@ node *DeleteNode( List *list, node *n )
   node *next = n->next;
 
   // We're not going to delete the head or tail >.<
-  assert( n->next != &list->head );
-  assert( n->prev != &list->tail );
+  assert( n != &list->head );
+  assert( n != &list->tail );
 
   // Unlink node from list then free node
   UnlinkNode( list, n );

@@ -54,6 +54,6 @@ void UnlinkNode( List *list, node *n );
 // Checks to see if a node is apart of a list at all
 int IsLinked( node *n );
 
-// It is important to use
+// It is important to use these for looping over the list
 node *ListBegin( List *list );
 node *ListEnd( List *list );

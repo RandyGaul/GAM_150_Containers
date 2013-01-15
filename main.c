@@ -26,6 +26,12 @@ int main( void )
   for(n = ListBegin( list ); n != ListEnd( list ); n = n->next)
     printf( "%d\n", NODE_DATA( n, int ) );
 
+  // Proper way to delete nodes from list is like so:
+  // note -- we are not doing n = n->next within the for loop, instead
+  //         we use the return value of delete
+  for(n = ListBegin( list ); n != ListEnd( list );)
+    n = DeleteNode( list, n );
+
   getchar( );
 
   return 0;
